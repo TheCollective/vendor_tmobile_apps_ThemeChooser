@@ -125,6 +125,7 @@ public class ChangeThemeHelper {
 
             // Kill the current Home process, they tend to be evil and cache drawable references in all apps
             final ActivityManager am = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+            am.forceStopPackage("com.anddoes.launcher");
             am.forceStopPackage("org.adwfreak.launcher");
             am.forceStopPackage("com.collective.aspire");
             am.forceStopPackage("com.android.launcher2");
